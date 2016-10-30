@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\stm32_exec.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\stm32_exec.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060183: Last Updated: Sun Oct 30 10:23:00 2016
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060183: Last Updated: Sun Oct 30 10:48:38 2016
 <BR><P>
 <H3>Maximum Stack Usage =        168 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -102,9 +102,9 @@ Function Pointers
  <LI><a href="#[36]">__main</a> from entry.o(.ARM.Collect$$$$00000000) referenced from stm32f10x.o(.text)
  <LI><a href="#[38]">fputc</a> from setup.o(.text) referenced from printfa.o(i.__0printf)
  <LI><a href="#[35]">main</a> from main.o(.text) referenced from entry9a.o(.ARM.Collect$$$$0000000B)
+ <LI><a href="#[52]">periodictask</a> from main.o(.text) referenced from main.o(.text)
  <LI><a href="#[37]">prvIdleTask</a> from tasks.o(.text) referenced from tasks.o(.text)
  <LI><a href="#[6]">vPortSVCHandler</a> from port.o(.emb_text) referenced from stm32f10x.o(RESET)
- <LI><a href="#[52]">vTaskFunction</a> from main.o(.text) referenced from main.o(.text)
  <LI><a href="#[2f]">vUARTInterruptHandler</a> from serial.o(.text) referenced from stm32f10x.o(RESET)
  <LI><a href="#[8]">xPortPendSVHandler</a> from port.o(.emb_text) referenced from stm32f10x.o(RESET)
  <LI><a href="#[9]">xPortSysTickHandler</a> from port.o(.text) referenced from stm32f10x.o(RESET)
@@ -719,8 +719,8 @@ Global Symbols
 
 <P><STRONG><a name="[122]"></a>__REV_Word</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, cortexm3_macro_rvds.o(.text), UNUSED)
 
-<P><STRONG><a name="[52]"></a>vTaskFunction</STRONG> (Thumb, 66 bytes, Stack size 8 bytes, main.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = vTaskFunction &rArr; vTaskDelayUntil &rArr; xTaskResumeAll &rArr; vTaskIncrementTick
+<P><STRONG><a name="[52]"></a>periodictask</STRONG> (Thumb, 66 bytes, Stack size 8 bytes, main.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = periodictask &rArr; vTaskDelayUntil &rArr; xTaskResumeAll &rArr; vTaskIncrementTick
 </UL>
 <BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskGetTickCount
 <LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskDelayUntil
@@ -1092,7 +1092,7 @@ Global Symbols
 <LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
 <LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskSuspendAll
 </UL>
-<BR>[Called By]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskFunction
+<BR>[Called By]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;periodictask
 </UL>
 
 <P><STRONG><a name="[99]"></a>vTaskDelay</STRONG> (Thumb, 86 bytes, Stack size 16 bytes, tasks.o(.text), UNUSED)
@@ -1171,7 +1171,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
 <LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
 </UL>
-<BR>[Called By]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskFunction
+<BR>[Called By]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;periodictask
 </UL>
 
 <P><STRONG><a name="[128]"></a>xTaskGetTickCountFromISR</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, tasks.o(.text), UNUSED)
@@ -1312,7 +1312,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_float_round
 </UL>
-<BR>[Called By]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskFunction
+<BR>[Called By]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;periodictask
 </UL>
 
 <P><STRONG><a name="[54]"></a>__aeabi_ui2f</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, ffltui.o(.text))
@@ -1320,11 +1320,11 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_float_epilogue
 </UL>
-<BR>[Called By]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskFunction
+<BR>[Called By]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;periodictask
 </UL>
 
 <P><STRONG><a name="[56]"></a>__aeabi_f2d</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, f2d.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskFunction
+<BR><BR>[Called By]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;periodictask
 </UL>
 
 <P><STRONG><a name="[131]"></a>__aeabi_uidiv</STRONG> (Thumb, 0 bytes, Stack size 12 bytes, uidiv.o(.text), UNUSED)
@@ -1451,7 +1451,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = __2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;assert_failed
-<LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskFunction
+<LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;periodictask
 </UL>
 
 <P><STRONG><a name="[138]"></a>__c89printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0printf), UNUSED)

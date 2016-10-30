@@ -1,9 +1,11 @@
-/**
- * Program skeleton for the course "Programming embedded systems"
- */
+//Course: Programming embedded systems.
+//Assignment number: One.
+//Part number: One.
+//Name: Bassem Farag.
+//Date: 30/10/2016.
 
+// include the standard I/O header file needed for using printf.
 #include <stdio.h>
-
 /* Scheduler includes. */
 #include "FreeRTOS.h"
 #include "stm32f10x_conf.h"
@@ -12,17 +14,9 @@
 
 /*-----------------------------------------------------------*/
 
-//void myTask(void *params) {
-//  char *str = (char*)params;
-		
-//  for (;;) {
-//    printf("%s\n", str);
-//	vTaskDelay(100 / portTICK_RATE_MS);
-//  }
-//  assert(0);
-//}
+
 unsigned int Time;
- void vTaskFunction( void * pvParameters )
+ void periodictask( void * timing )
  {
   unsigned long xLastWakeTime;
  const int period = 100;
@@ -49,8 +43,8 @@ unsigned int *t= &Time;
 int main( void )
 {
   prvSetupHardware();
-	 xTaskCreate(vTaskFunction,   // pointer to task function
-              "vTaskFunction",	// name of task
+	 xTaskCreate(periodictask,   // pointer to task function
+              "periodictask",	// name of task
 			  100,      // size of stack: 100 words = 400 byte
 			            // should be at least configMINIMAL_STACK_SIZE
 			  t,     // task parameters
