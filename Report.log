@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.7.22)  30 OCT 2016 21:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.7.22)  31 OCT 2016 13:14
 entering extended mode
 **./Report.tex
 (Report.tex
@@ -686,10 +686,13 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ("C:\Program Files\MiKTeX 2.9\tex\latex\microtype\mt-msb.cfg"
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
+LaTeX Font Info:    Font shape `T1/futs/bx/it' in size <12> not available
+(Font)              Font shape `T1/futs/b/it' tried instead on input line 108.
+
 <uppsala.png, id=1, 353.32pt x 353.32pt>
 File: uppsala.png Graphic file (type png)
  <use uppsala.png>
-Package pdftex.def Info: uppsala.png used on input line 100.
+Package pdftex.def Info: uppsala.png used on input line 113.
 (pdftex.def)             Requested size: 113.81102pt x 113.80869pt.
 
 
@@ -698,7 +701,7 @@ Package Fancyhdr Warning: \headheight is too small (13.6pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 100.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 113.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
@@ -708,36 +711,43 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 10.07397pt on input line 100.
+(Font)              scaled to size 10.07397pt on input line 113.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 7.63599pt on input line 100.
+(Font)              scaled to size 7.63599pt on input line 113.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 100.
+(Font)              scaled to size 5.51999pt on input line 113.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 10.07397pt on input line 100.
+(Font)              scaled to size 10.07397pt on input line 113.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 7.63599pt on input line 100.
+(Font)              scaled to size 7.63599pt on input line 113.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 100.
+(Font)              scaled to size 5.51999pt on input line 113.
  [1
 
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <./uppsala.png (PNG copy)>
-] (Report.aux) ) 
+]
+File: uppsala.png Graphic file (type png)
+ <use uppsala.png>
+Package pdftex.def Info: uppsala.png used on input line 120.
+(pdftex.def)             Requested size: 113.81102pt x 113.80869pt.
+
+[2] (Report.aux) ) 
 Here is how much of TeX's memory you used:
- 8794 strings out of 493335
- 141097 string characters out of 3139245
- 331570 words of memory out of 3000000
- 12099 multiletter control sequences out of 15000+200000
- 81336 words of font info for 109 fonts, out of 3000000 for 9000
+ 8828 strings out of 493335
+ 141493 string characters out of 3139245
+ 332570 words of memory out of 3000000
+ 12105 multiletter control sequences out of 15000+200000
+ 91788 words of font info for 131 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 47i,15n,58p,8843b,469s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Eng.Bassem\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\
-jknappen\ec\dpi600\ectt1095.pk>{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fon
-tname/8r.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/adobe/utopia/putr8a.pfb>
-Output written on Report.pdf (1 page, 49363 bytes).
+ 47i,15n,58p,8843b,598s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Eng.Bassem\AppData\Local\MiKTeX\2.9\fonts\pk\ljfou
+r\jknappen\ec\dpi600\ectt1095.pk>{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/f
+ontname/8r.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/adobe/utopia/putbi8a.pf
+b><C:/Program Files/MiKTeX 2.9/fonts/type1/adobe/utopia/putr8a.pfb>
+Output written on Report.pdf (2 pages, 68416 bytes).
 PDF statistics:
- 21 PDF objects out of 1000 (max. 8388607)
+ 28 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 28678 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 31238 words of extra memory for PDF output out of 35830 (max. 10000000)
 

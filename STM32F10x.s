@@ -15,7 +15,7 @@
 ;//   <o> Stack Size (in Bytes) <0x0-0xFFFFFFFF:8>
 ;// </h>
 
-Stack_Size      EQU     0x00000200
+Stack_Size      EQU     0x00000600
 
                 AREA    STACK, NOINIT, READWRITE, ALIGN=3
 Stack_Mem       SPACE   Stack_Size
@@ -119,7 +119,7 @@ __Vectors       DCD     __initial_sp              ; Top of Stack
 Reset_Handler   PROC
                 EXPORT  Reset_Handler             [WEAK]
                 IMPORT  __main
-]                LDR     R0, =__main
+                LDR     R0, =__main
                 BX      R0
                 ENDP
 

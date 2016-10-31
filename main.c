@@ -2,6 +2,7 @@
 //Assignment number: One.
 //Part number: One.
 //Name: Bassem Farag.
+// Personal Number : 199110167153.
 //Date: 30/10/2016.
 
 // include the standard I/O header file needed for using printf.
@@ -19,7 +20,7 @@ unsigned int Time;
  void periodictask( void * timing )
  {
   unsigned long xLastWakeTime;
- const int period = 1;
+ const int period = 100;
 	 float printtime;
 	 
      // Initialise the xLastWakeTime variable with the current time.
@@ -27,11 +28,10 @@ unsigned int Time;
      for( ;; )
      {
 			 printtime= (float)Time;
-			   printf("%.2f s \n", printtime/1000);
+			   printf("%f s \n", printtime/1000);
          // Wait for the next cycle.
          vTaskDelayUntil( &xLastWakeTime, period );
 				 Time = xTaskGetTickCount();
-				   // this is redirected to USART 1    
 			 }
 		   assert(0);
  }

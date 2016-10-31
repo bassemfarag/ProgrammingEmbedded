@@ -79,8 +79,8 @@
 		\horrule{2pt} \\[0.5cm]
 }
 \author{
-		\normalfont 
-		 Bassem Farag  \\ Personal number: 199110167153 \\	
+		\normalfont %\large \\ 
+		 Bassem Farag  \\ Personal number: 199110167153 \\	%\large
         \today
 }
 \date{}
